@@ -1,0 +1,170 @@
+/* ===== Footer ===== */
+.footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 60px 0 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* ===== Top Row ===== */
+.topRow {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== Brand ===== */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.logoColon {
+  color: #e63946;
+  font-weight: 900;
+  font-size: 36px;
+}
+
+.logoText {
+  color: #ffffff;
+}
+
+.brandDesc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #94a3b8;
+}
+
+.certBadges {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.certBadge {
+  width: 72px;
+  height: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.certBadge:hover {
+  opacity: 1;
+}
+
+/* ===== Columns Grid ===== */
+.columnsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.columnTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.columnLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.columnLink {
+  font-size: 13px;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.columnLink:hover {
+  color: #ffffff;
+}
+
+/* ===== Bottom Bar ===== */
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin-top: 0;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.bottomLinks a {
+  font-size: 12px;
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bottomLinks a:hover {
+  color: #94a3b8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 20px;
+  }
+
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .columnsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .columnsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,239 @@
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(135deg, #f5f0e8 0%, #eee9e0 40%, #e8e3da 100%);
+  padding: 48px 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+}
+
+.heroInner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Left Side ===== */
+.heroLeft {
+  flex: 1;
+  max-width: 560px;
+}
+
+.heroHeading {
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--color-navy);
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* ===== A-PRAS ===== */
+.aprasSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.aprasLogo {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.aprasText {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+/* ===== Globe ===== */
+.heroRight {
+  flex: 0 0 auto;
+}
+
+.globeWrapper {
+  width: 420px;
+  height: 420px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Soft glow behind the globe */
+.globeGlow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(226, 232, 240, 0.3) 50%,
+    transparent 70%
+  );
+  filter: blur(20px);
+  z-index: 0;
+}
+
+/* The globe itself */
+.globe {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  animation: float 5s ease-in-out infinite;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(241, 245, 249, 0.9) 30%,
+    rgba(226, 232, 240, 0.7) 60%,
+    rgba(203, 213, 225, 0.6) 100%
+  );
+  border: 1.5px solid rgba(148, 163, 184, 0.25);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 12px 40px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.03),
+    inset 0 2px 6px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* World map SVG inside globe */
+.worldMap {
+  width: 100%;
+  height: 100%;
+  animation: globeRotate 30s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes globeRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Network lines SVG */
+.networkSvg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Network dots */
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background: #ffffff;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+
+.dotLg {
+  width: 11px;
+  height: 11px;
+  border: 2px solid rgba(100, 116, 139, 0.45);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.8),
+    0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dotSm {
+  width: 7px;
+  height: 7px;
+  border: 1.5px solid rgba(100, 116, 139, 0.35);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  animation: dotPulse 3s ease-in-out infinite;
+}
+
+.dotSm:nth-child(odd)  { animation-delay: 0s; }
+.dotSm:nth-child(even) { animation-delay: 1.5s; }
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.4); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 32px 0;
+    min-height: auto;
+  }
+
+  .heroInner {
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .heroLeft { max-width: 100%; }
+  .heroHeading { font-size: 26px; }
+  .heroSubtitle { font-size: 15px; }
+
+  .aprasSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aprasLogo { width: 80px; }
+
+  .globeWrapper {
+    width: 280px;
+    height: 280px;
+  }
+
+  .globe {
+    width: 180px;
+    height: 180px;
+  }
+
+  .globeGlow {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .globeWrapper {
+    width: 340px;
+    height: 340px;
+  }
+
+  .globe {
+    width: 220px;
+    height: 220px;
+  }
+
+  .heroHeading { font-size: 32px; }
+}

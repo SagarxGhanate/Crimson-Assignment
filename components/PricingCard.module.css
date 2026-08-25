@@ -1,0 +1,217 @@
+/* ===== Card ===== */
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 28px 24px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.cardRecommended {
+  border: 2px solid #e63946;
+  box-shadow: 0 4px 24px rgba(230, 57, 70, 0.12);
+}
+
+/* ===== Recommended Pill ===== */
+.recommendedPill {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e63946;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 18px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* ===== Badge ===== */
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+/* ===== Title ===== */
+.title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+/* ===== VIP Editor Row ===== */
+.vipRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+}
+
+.vipIcon {
+  width: 52px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.vipText {
+  font-size: 11px;
+  color: #92400e;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* ===== Price ===== */
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.priceLabel {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.priceAmount {
+  font-size: 36px;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.priceSuffix {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ===== Description ===== */
+.description {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+/* ===== Features ===== */
+.features {
+  margin-bottom: 16px;
+}
+
+.featuresTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.6;
+  padding: 3px 0;
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ===== After Services ===== */
+.afterServices {
+  margin-bottom: 20px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.afterServicesTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.afterServiceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 12px;
+  color: #475569;
+  line-height: 1.5;
+  padding: 2px 0;
+}
+
+.afterServiceBullet {
+  color: #e63946;
+  font-size: 6px;
+  line-height: 1.5;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* ===== CTA Button ===== */
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  padding: 12px;
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background: #e63946;
+  transform: translateY(-1px);
+}
+
+.ctaArrow {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+}

@@ -1,0 +1,133 @@
+.banner {
+  background: linear-gradient(135deg, #fde68a 0%, #fbbf24 50%, #fb923c 100%);
+  padding: 40px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.35), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(230, 57, 70, 0.15), transparent 50%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+}
+
+.label {
+  font-size: 18px;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -0.005em;
+}
+
+.percent {
+  color: #e63946;
+  font-size: 22px;
+  font-weight: 800;
+  margin-right: 4px;
+}
+
+.codeRow {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.codeBox {
+  font-family: 'SF Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 32px;
+  font-weight: 800;
+  padding: 14px 32px;
+  background: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 10px;
+  color: #0f172a;
+  letter-spacing: 0.14em;
+  box-shadow:
+    0 0 0 4px rgba(230, 57, 70, 0.15),
+    0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.copyBtn:hover {
+  background: #e63946;
+  transform: translateY(-1px);
+}
+
+.pulse {
+  animation: pulse 0.4s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.rules {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rules li {
+  color: #0f172a;
+  font-size: 15px;
+  line-height: 1.7;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.bullet {
+  color: #e63946;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .banner { padding: 32px 20px; }
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .codeBox { font-size: 24px; padding: 12px 22px; }
+  .label { font-size: 15px; }
+  .percent { font-size: 18px; }
+}
