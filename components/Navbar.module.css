@@ -192,7 +192,8 @@
   gap: 5px;
   padding: 8px;
   cursor: pointer;
-  z-index: 101;
+  z-index: 200;
+  position: relative;
 }
 
 .hamburgerLine {
@@ -224,8 +225,8 @@
   right: 0;
   bottom: 0;
   background: var(--color-navy);
-  z-index: 99;
-  padding: 80px 24px 24px;
+  z-index: 150;
+  padding: 100px 24px 24px;
   overflow-y: auto;
 }
 
